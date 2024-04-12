@@ -1,0 +1,19 @@
+from pymongo import MongoClient
+
+# Connect to MongoDB
+client = MongoClient('mongodb://localhost:27017/')
+
+# Access or create database
+db = client['medicinal_plants_db']
+
+# Access or create collection
+collection = db['plant_information']
+
+# Insert data into collection
+plant_data = {
+    'name': 'Ashwagandha',
+    'botanical_details': {...},
+    'images': [...],
+    'traditional_uses': [...]
+}
+collection.insert_one(plant_data)
