@@ -1,0 +1,7 @@
+import boto3
+
+# Connect to AWS S3
+s3 = boto3.client('s3', region_name='us-east-1')
+
+# Upload image to S3 bucket
+s3.upload_file('path_to_image.jpg', 'your_bucket_name', 'uploaded_image.jpg')
