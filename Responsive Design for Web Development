@@ -1,0 +1,14 @@
+<!-- Example of HTML template using Bootstrap for responsive design -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Medicinal Plant Identification System</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Plant Identification System</h1>
+        <!-- Content and forms for image upload, processing, and result display -->
+    </div>
+</body>
+</html>
