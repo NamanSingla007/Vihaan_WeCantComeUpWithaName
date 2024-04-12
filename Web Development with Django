@@ -1,0 +1,7 @@
+# Assuming you have a Django project set up with a model for plant information
+from django.shortcuts import render
+from .models import Plant
+
+def index(request):
+    plants = Plant.objects.all()
+    return render(request, 'index.html', {'plants': plants})
