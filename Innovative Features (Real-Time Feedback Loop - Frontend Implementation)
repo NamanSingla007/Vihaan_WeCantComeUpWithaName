@@ -1,0 +1,15 @@
+// Example of frontend JavaScript code for real-time feedback
+function submitFeedback(feedbackId, correctedLabel) {
+    // Make an AJAX request to update feedback in the database
+    $.ajax({
+        url: '/update_feedback/',
+        type: 'POST',
+        data: { feedback_id: feedbackId, corrected_label: correctedLabel },
+        success: function(response) {
+            // Handle success response
+        },
+        error: function(xhr, status, error) {
+            // Handle error response
+        }
+    });
+}
