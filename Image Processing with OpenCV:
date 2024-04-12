@@ -1,0 +1,13 @@
+import cv2
+
+# Load an image
+image = cv2.imread('path_to_image.jpg')
+
+# Preprocessing: Resize image
+resized_image = cv2.resize(image, (width, height))
+
+# Segmentation: Perform edge detection
+edges = cv2.Canny(resized_image, threshold1, threshold2)
+
+# Feature Extraction: Extract color histogram features
+histogram = cv2.calcHist([resized_image], [0, 1, 2], None, [bins, bins, bins], [0, 256, 0, 256, 0, 256])
