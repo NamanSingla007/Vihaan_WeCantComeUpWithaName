@@ -1,0 +1,4 @@
+import paho.mqtt.publish as publish
+
+# Publish data to IoT device topic
+publish.single('plant_data', payload='{"temperature": 25, "humidity": 60}', hostname='mqtt.server.com')
