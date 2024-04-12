@@ -1,0 +1,18 @@
+import paho.mqtt.client as mqtt
+
+# Connect to MQTT broker
+client = mqtt.Client()
+client.connect('mqtt.server.com', port)
+
+# Subscribe to IoT device topic
+client.subscribe('plant_data')
+
+def on_message(client, userdata, message):
+    # Process incoming data from IoT device
+    data = message.payload.decode('utf-8')
+    # Perform actions based on received data
+
+client.on_message = on_message
+
+# Start MQTT loop
+client.loop_forever()
